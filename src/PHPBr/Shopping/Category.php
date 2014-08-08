@@ -14,7 +14,7 @@ interface Category extends IteratorAggregate
     public function hasChild();
 
     /**
-     * @return \Iterator<Category>
+     * @return \Iterator<\PHPBr\Shopping\Category>
      */
     public function getChildrenCategoryIterator();
 
@@ -29,13 +29,13 @@ interface Category extends IteratorAggregate
     public function getName();
 
     /**
-     * @return \Neto\Shopping\Category
+     * @return \PHPBr\Shopping\Category
      */
     public function getParent();
 
     /**
-     * @return \Iterator<Product>
-     * @see Category::getIterator()
+     * @return \Iterator<\PHPBr\Shopping\Product>
+     * @see \PHPBr\Shopping\Category::getIterator()
      */
     public function getProductIterator();
 }

@@ -4,7 +4,7 @@ namespace PHPBr\Shopping;
 interface Product
 {
     /**
-     * @return \Neto\Shopping\Category
+     * @return \PHPBr\Shopping\Category
      */
     public function getCategory();
 

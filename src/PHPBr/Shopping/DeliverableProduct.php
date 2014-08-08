@@ -4,7 +4,7 @@ namespace PHPBr\Shopping;
 interface DeliverableProduct extends Product
 {
     /**
-     * @return \Neto\Shopping\ProductDimensions
+     * @return \PHPBr\Shopping\ProductDimensions
      */
     public function getDimensions();
 }

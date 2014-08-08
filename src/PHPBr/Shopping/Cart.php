@@ -4,7 +4,7 @@ namespace PHPBr\Shopping;
 class Cart implements \Countable, \IteratorAggregate, \Serializable
 {
     /**
-     * @var Product[]
+     * @var \PHPBr\Shopping\Product[]
      */
     private $items = [];
 
@@ -14,7 +14,7 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
     private $quantities = [];
 
     /**
-     * @param Product $product
+     * @param \PHPBr\Shopping\Product $product
      * @param int $quantity
      */
     public function addItem(Product $product, $quantity)
@@ -31,7 +31,7 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
 
     /**
      * @return int
-     * @see Countable::count()
+     * @see \Countable::count()
      */
     public function count()
     {
@@ -39,8 +39,8 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
     }
 
     /**
-     * @return Iterator<Product>
-     * @see IteratorAggregate::getIterator()
+     * @return \Iterator<\PHPBr\Shopping\Product>
+     * @see \IteratorAggregate::getIterator()
      */
     public function getIterator()
     {
@@ -50,7 +50,7 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
     }
 
     /**
-     * @param Product $product
+     * @param \PHPBr\Shopping\Product $product
      * @param int $quantity
      */
     public function removeItem(Product $product, $quantity = 0)
@@ -74,7 +74,7 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
 
     /**
      * @return string
-     * @see Serializable::serialize()
+     * @see \Serializable::serialize()
      */
     public function serialize()
     {
@@ -83,7 +83,7 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
     }
 
     /**
-     * @see Serializable::unserialize()
+     * @see \Serializable::unserialize()
      */
     public function unserialize($serialized)
     {
