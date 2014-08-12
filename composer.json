@@ -11,8 +11,8 @@
         "sebastian/phpcpd": "@stable"
 	},
     "autoload": {
-        "psr-0": {
-            "": ["src/", "tests/"]
+        "psr-4": {
+            "PHPBr\\Shopping\\": ["src", "tests"]
         }
     }
 }
