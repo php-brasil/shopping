@@ -94,9 +94,11 @@ class Cart implements \Countable, \IteratorAggregate, \Serializable
         }
 
         foreach ($data['items'] as $id => $product) {
-            if (isset($data['quantities'][$id])) {
-                $this->addProduct($product, $data['quantities'][$id]);
+            if (!isset($data['quantities'][$id])) {
+                continue;
             }
+            
+            $this->addProduct($product, $data['quantities'][$id]);
         }
     }
 }
